@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toyshop Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1 id="welcome-message"></h1>
+  </div>
+
+  <script>
+    const username = localStorage.getItem("loggedInUser");
+    document.getElementById("welcome-message").innerText = `Welcome, ${username}!`;
+    
+    // Remove nav if logged in
+    const nav = document.getElementById("nav-links");
+    if (nav) {
+      nav.style.display = "none";
+    }
+  </script>
+</body>
+</html>
